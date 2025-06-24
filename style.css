@@ -40,10 +40,24 @@ a{
     font-size: 14px;
     margin: 5px 8px;
     padding-right: 5px;
+    position: relative;
 }
 .navbar-center ul li a img {
      width: 30px;
 }
+.navbar-center ul li a::after{
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background: blueviolet;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.5s;
+}
+.navbar-center ul li a:hover::after{
+    width: 100%;
+}
+
 .nav-profile-img{
     width: 30px;
     border-radius: 50%;
@@ -54,7 +68,7 @@ a{
 .online{
     position: relative;
 }
-.online ::after{
+.online::after{
     content: '';
     width: 7px;
     height: 7px;
@@ -65,3 +79,135 @@ a{
     background: green;
     position: absolute;
 }
+.search-box{
+    background: lightcyan;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.search-box img{
+    width: 15px;
+    
+}
+.search-box input{
+    width: 100%;
+    background : transparent;
+    outline: none;
+    padding: 7px;
+    border: none;
+}
+/*                                        nav bar done                                         */
+
+
+.container{
+    display: flex;
+    padding: 20px 6%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.leftside-bar{
+    flex-basis: 25%;
+    align-self: self-start;
+}
+.siderbar-profile-box{
+    background: white;
+}
+.siderbar-profile-info{
+    padding : 0 25px;
+}
+.siderbar-profile-info img {
+    border-radius: 50%;
+    width: 90px;
+    background:  white;
+    padding:  5px;
+    margin-top: -45px;
+}
+.siderbar-profile-info h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.siderbar-profile-info {
+    font-size: 29px;
+    font-weight: 200;
+}
+
+.siderbar-profile-info ul{
+    list-style: none;
+    margin : 20px 0 ;
+}
+.siderbar-profile-info ul li{
+    font-size: 15px;
+    width: 100%;
+    margin : 8px 0;
+}
+.siderbar-profile-info ul li span{
+    float: right;
+    color: navy;
+}
+.sidebar-profile-link{
+    display: flex;
+    align-items: center;
+    border-top:1px solid #ccc;
+    padding: 20px;
+}
+.sidebar-profile-link a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar-profile-link a img {
+    margin-right: 10px;
+    width: 20px;
+    display: flex;
+}
+.sidebar-activity{
+    background: #fff;
+    margin-top: 25px;
+    padding: 10px 25px;
+}
+.sidebar-activity h3{
+    font-size: 20px;
+    color: crimson;
+    margin : 20px 0;
+}
+.sidebar-activity a{
+    display: flex;
+    margin-top: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+.sidebar-activity a img{
+    margin-right: 5px;
+}
+.discover-more-link{
+    text-align: center;
+    margin: 25px -25px 0 -25px;
+    border-top: 1px solid #ccc;
+}
+.discover-more-link a{
+    display:inline-block;
+    margin: 10px 0;
+}
+/*                                        leftside-bar                                         */
+.leftside-bar{
+        flex-basis: 25%;
+        align-self: self-start;
+}
+/*                                        rightside-bar                                         */
+.main-content {
+    flex-basis: 47%;
+    align-self: self-start;
+}
+
+/*                                        main-content                                         */
